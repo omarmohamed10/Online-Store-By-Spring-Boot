@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<title>Admin Page</title>
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	background-color: rgba(0,0,0,0.8);
+}
+
+h2{
+	align-content: center;
+	text-align: center;
+	color: white;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+input[type=submit]{
+	
+	background: rgb(66, 184, 221);
+	width: 200px;
+	height: 80px;
+	border-radius: 50px 50px 50px 50px;
+	font-size: 15px;
+}
+input[type=submit]:hover{
+   background-color:#2024E9;
+	color: white;
+}
+#pro{
+	position: absolute;
+	left: 260px;
+	top: 90px;
+}
+#bra{
+	position: absolute;
+	bottom: 300px;
+	left: 260px;
+}
+#Sstores{
+	position: absolute;
+	right: 200px;
+}
+#Sproducts{
+	position: absolute;
+	right: 200px;
+	bottom: 300px;
+}
+#Susers{
+	position: absolute;
+	left: 900px;
+	top: 200px;
+}
+#SStatistcis{
+position: absolute;
+	left: 400px;
+	top: 200px;
+}
+
+</style>
+<meta charset="utf-8">
+<title>Admin Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<h2>Admin HomePage</h2>
+	<div class="buttons">
+		<form  action="/addProduct" >	  		
+			<input id="pro" type='submit' value='Add Product'/></input>	
+		 </form>
+			<form  action="/addBrand" >	  		
+			<input id="bra" type='submit' value='Add Brand'/></input>	
+		 </form>
+			<form  action="/showAllUsers" >	  		
+			<input id="Susers" type='submit' value='Show Users'/></input>	
+		 </form>
+			<form  action="/AllStores" >	  		
+			<input id="Sstores" type='submit' value='Show Stores'/></input>	
+		 </form>
+			<form  action="/adminp" >	  		
+			<input id="Sproducts" type='submit' value='Show Products'/></input>	
+		 </form>
+		  
+			<form  action="/CountingUsers" >	  		
+			<input id="SStatistcis" type='submit' value='Show Statistics'/></input>	
+		 </form>
+		 
+	 
+		 
+ 		</div>
+ 		
+</body>
+	
+	
+	
+</html>

@@ -1,0 +1,111 @@
+<html>
+
+<head>
+        <title>addstore</title>
+<style>
+@keyframes fade {
+  0%,100% { opacity: 0 }
+  50% { opacity: 1 }
+}
+
+
+body {
+  background: #2f313d;
+  color: rgb(13, 13, 13);
+  font-family: sans-serif;
+}
+
+h1 {
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #46485c;
+  text-decoration: none;
+}
+
+.form {
+  width: 250px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -184px 0px 0px -155px;
+  background: rgba(0,0,0,0.2);
+  padding: 20px 30px;
+    animation: fade 2s linear;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 0px 1px 0px rgba(0,0,0,0.3),inset 0px 1px 0px rgba(255,255,255,0.07)
+}
+
+input[type="text"],input[type="email"],input[type="password"] {
+  width: 250px;
+  padding: 25px 0px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  outline: none;
+  color: #FFFFFF;
+}
+
+input[type="submit"] {
+  background-color: rgb(26, 26, 26);
+  border: 0;
+  width: 250px;
+  height: 40px;
+  border-radius: 3px;
+    margin-top: 20px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+input[type="submit"]:hover {
+  background-color: white;
+    color:  rgb(26, 26, 26);
+}
+
+
+
+placeholder {
+  color: #46485c;
+ transition: all 0.2s linear;
+  transform: translate(10px, 0);
+  opacity: 0;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: all 0.2s linear;
+  transform: translate(10px, 0);
+  opacity: 0;
+}
+</style>
+
+</head>
+
+
+<body>
+    
+   
+   <div class='form'>
+        
+    <h1>Store Page</h1>
+
+<form method="post" th:action="@{/addStore}" th:object="${store}">        
+  <input placeholder="Store name"     type="text" th:field="*{name}"/>
+  <input placeholder="Store Type"     type="text" th:field="*{type}"/>
+  <input placeholder="Store location" type="text" th:field="*{location}"/>
+  <input type='submit' value='Insert Store'/>
+</form>        
+
+        
+</div>
+    
+</body>
+
+
+
+</html>

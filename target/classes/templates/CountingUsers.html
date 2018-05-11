@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymyleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>All Statistics</title>
+<style>
+@charset "utf-8";
+/* CSS Document */
+
+table.darkTable {
+  font-family: "Arial Black", Gadget, sans-serif;
+  border: 2px solid #000000;
+  background-color: #4A4A4A;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.darkTable td, table.darkTable th {
+  border: 1px solid #4A4A4A;
+  padding: 3px 2px;
+}
+table.darkTable tbody td {
+  font-size: 13px;
+  color: #E6E6E6;
+}
+table.darkTable tr:nth-child(even) {
+  background: #888888;
+}
+table.darkTable thead {
+  background: #000000;
+  border-bottom: 3px solid #000000;
+}
+table.darkTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #E6E6E6;
+  text-align: center;
+  border-left: 2px solid #4A4A4A;
+}
+table.darkTable thead th:first-child {
+  border-left: none;
+}
+</style>
+</head>
+<body>
+	
+<table class="darkTable">
+<thead>
+   <tr>
+	           <th>SumOfBuyer Numbers</th>
+	           <th>SumOfStoreOwner Numbers</th>
+	           <th>SumOfProduct Numbers</th>
+	           <th>SumOfStore Numbers</th>
+	           <th>SumOfBrand Numbers</th>
+	           <th>MaxOfProduct Price</th>
+	           <th>MinOfProduct Price</th>
+	           <th>AverageOfProduct Price</th>
+	  </tr>
+</thead>
+	        
+	        <tr th:each="countdata: ${count}">
+	            <td th:text="${countdata.numberofbuyer}"></td>
+	            <td th:text="${countdata.numberofstoreowner}"></td>
+	           <td th:text="${countdata.numberofproduct}"></td>
+	           <td th:text="${countdata.numberofstores}"></td>
+	          <td th:text="${countdata.numberofbrands}"></td>
+	         <td th:text="${countdata.max}"></td>
+	       <td th:text="${countdata.min}"></td>
+	     <td th:text="${countdata.average}"></td>
+	          
+	        </tr>
+	            
+	         
+</table>
+
+</body>
+</html>
